@@ -1,0 +1,115 @@
+1链接--------------------------------
+相关配置文档  http://120.25.233.65/xiaochaofeng/doc
+gxdev1 00000000
+2开头的 abc12345
+a开头的 a1234567
+
+https://tgideas.qq.com/doc/frontend/component/pc/tab.html
+
+we的client-web （http://gitlab.asset.or.kr/project_gx/client-web/commit/fe193a80a1aa017937f9b7ec4009e0eaaf0d7a7b#a8030680377d4348934adb19f2fb30a0297cf563）
+GX 官网 https://www.gx.com
+    测试环境
+	官网地址：http://192.168.5.241                                  --- 对应 client-web  xnyyzx
+	后台地址：http://192.168.5.241:3000                             --- 对应 admin-ui
+	jenkins:http://192.168.5.240:8080 --- 用户名和密码问运维
+
+	H5首页：http://192.168.5.241/m/index.html                       --- 对应 client-h5
+	activity-h5地址：http://192.168.5.241/rebate/index.html         --- 对应 activity-h5
+	代理商地址：http://192.168.5.241:82                              --- 对应 contract-admin 
+
+    pre环境
+	官网地址：http://120.24.168.202                                  --- 对应 client-web
+	后台地址：http://120.24.168.202:3000                             --- 对应 admin-ui
+	jenkins:http://39.108.176.59 --- 账号：admin 密码：Smkj_jks!
+
+	H5首页：http://120.24.168.202/m/index.html                       --- 对应 client-h5
+	activity-h5地址：http://120.24.168.202/rebate/index.html         --- 对应 activity-h5
+	代理商地址：http://120.24.168.202:82                              --- 对应 contract-admin 
+
+CCMYL(CC) 官网 https://www.ccmyl.com
+   测试环境
+	官网地址：http://47.52.28.120                                  --- 对应 client-web
+	后台地址：http://47.52.28.120:442                             --- 对应 admin-ui 
+	jenkins:http://47.52.28.120/jenkins/ --- 用户名：admin 密码：gxadmin
+
+	H5首页：http://47.52.28.120/m/index.html                       --- 对应 client-h5
+	activity-h5地址：http://47.52.28.120/rebate/index.html         --- 对应 activity-h5
+
+   登陆密码：ccm@admin456
+
+
+2开发信息----------------------------
+0
+sourcetree
+
+1原型图
+广告方管理：https://frtw0g.axshare.com/#g=1&p=%E5%B9%BF%E5%91%8A%E6%96%B9%E7%AE%A1%E7%90%86
+
+2 gx google验证码配置
+https://hibugabcd.gx.com
+qianduan
+dfdfDFsdFFDGFdfg#ff
+ZKQXNPGFPHJZATHQ
+
+4禅道
+https://www.leangoo.com/kanban/board_link/invite/3591156/21777/91ca9f128c34a27a9ad1a28a6d58316e/564952
+
+5vpn
+线上链接配置
+https://ccmadminylvip.ccmyl.vip/
+test
+test9900
+6QVMENSUJAT6H64S
+
+公司wifi密码：HyKj12332166
+
+
+6
+arise  C2C  
+api：http://8.210.179.198:9792/swagger-ui.html#/asset-controller/removeUsingPOST
+原型：https://lanhuapp.com/url/h1ZWD
+测试环境：http://8.210.161.18:442
+
+gx  C2C
+设计图：https://app.mockplus.cn/team/invitation/BApNZjm_eu
+
+全api接口
+http://8.210.183.120:8765/swagger-ui.html
+
+代码迁移
+ko 可以，uex的接口报错，不发（以后dist直接拿）
+gx，ccm的在一起合并
+
+
+主题转化
+
+arise的  在srr分支上
+http://8.210.161.18:442
+jenclies：
+http://8.210.161.18/jenkins/login?from=%2Fjenkins%2F
+admin/saradmin
+--------------------------------
+acticy-web（不要验证码的）
+651894868@qq.com
+shufu4559
+
+SAR的分支有新建要用XXX_SAR结尾  这样jenkins才能识别到其他在SAR开发的分支
+SAR必须大写呢。 要不然识别不到
+
+@赖钟杰 - 前端 @胡会玲前端 阿里滑块验证的文档地址：https://help.aliyun.com/document_detail/121898.html?spm=a2c4g.11186623.6.559.50d9568fZ0H36L
+
+NoShuFu:
+https://bang.360.cn/youpin/search?keyword=mac
+
+NoShuFu:
+https://app.mockplus.cn/app/tNjOteV2max/specs/design/sioJoN-BB_
+
+NoShuFu:
+http://192.168.5.11:8981/swagger-ui.html#/
+后台管理原型图
+https://app.mockplus.cn/run/prototype/MckxwRvPEWXU/DY_oV3GtO/FFwPx5bwMkY?ha=1&ps=1
+
+h5
+http://47.57.68.162:8765/swagger-ui.html?urls.primaryName=defi-core#/
+
+

@@ -1,0 +1,53 @@
+999 1000
+输入+最小 > 1000 取1000
+开发  
+启用 HMR， devServer，source maps（devtool：source-maps）
+
+{{{{}}}}
+webpack性能优化需要自己去配，去尝试
+这段时间看看jest
+{{{{}}}}
+
+开发
+《一》tree shaking 不推荐使用
+副作用
+1：使用 export default
+2：函数存在副作用，如
+function unused(a, b) {
+    const c = 1;
+    console.log(a + b);
+}
+https://zhuanlan.zhihu.com/p/260724544
+
+export function add(a, b) {
+    unused(a,b);
+    return a + b
+}
+一个副作用是：有一些代码，是在 import 时执行了一些行为，这些行为不一定和任何导出相关。例如 polyfill ，Polyfills 通常是在项目中全局引用，而不是在 index.js 中使用导入的方式引用。
+Tree Shaking 并不能自动判断哪些脚本是副作用，因此手动指定它们非常重要。
+webpack4 的 mode 集成了多个优化项，在 produciton 模式下默认开启了 Tree Shaking
+《二》代码分离
+把代码分离到不同的 bundle 中，然后可以按需加载或并行加载这些文件。获取更小的 bundle，以及控制资源加载优先级，如果使用合理，会极大影响加载时间。
+CommonsChunkPlugin 防止重复
+《三》懒加载（按需加载）
+1 延迟加载在Vue的部件
+ components: {
+    AsyncCmp: () => import("./AsyncCmp")
+  }
+2 延迟加载在Vue公司的路由器
+new VueRouter({
+  routes: [{ path: "/login", component: Login }]
+});
+3 延迟加载Vuex模块
+const store = new Vuex.Store()
+import('./store/login').then(loginModule => {
+  store.registerModule('login', loginModule)
+})
+《四》source maps（devtool：false）
+《五》source maps（devtool：false）
+run -> 35787ms
+build -> 46s
+3.4M 521KB
+https://alexjover.com/blog/lazy-load-in-vue-using-webpack-s-code-splitting/
+
+可以采用html-loader，动态图片不用再requure了

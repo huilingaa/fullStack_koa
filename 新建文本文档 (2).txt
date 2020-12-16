@@ -1,0 +1,18 @@
+1 在babel-loader上配置
+        loader: "babel-loader",
+        exclude: /node_modules/,
+        options: {
+          cacheDirectory: true
+        },
+
+确保要转换的文件越少越好。因为您可能匹配/\.m?js$/，所以您可能正在转换node_modules文件夹或其他不需要的源。
+
+要排除node_modules，请参见上面记录exclude的loaders配置中的选项。
+
+您也可以使用该cacheDirectory选项将babel-loader的速度提高2倍。这将把转换缓存到文件系统。
+
+2 ：通过IgnorePlugin设置对moment的整个locale本地化文件夹导入的正则匹配，来防止将所有的本地化文件进行打包。如果你确实需要某国语言，仅手动导入那国的语言包即可。
+
+3： 通过terser-webpack-plugin的parallel和cache配置来并行处理并缓存之前的编译结果。terser-webpack-plugin是之前UglifyPlugin的一个替代品，因为UglifyPlugin已经没有继续维护了，从Webpack4.x起，已经推荐使用terser-webpack-plugin来进行代码压缩、混淆，以及Dead Code Elimination以实现Tree Shaking。对于parallel从整个设置的名称大家就会知道它有什么用，没错，就是并行，而cache也就是缓存该插件的处理结果，在下一次的编译中对于内容未改变的文件可以直接复用上一次编译的结果。
+
+4：HappyPack  多线程（进程）支持
