@@ -1,0 +1,59 @@
+{
+  "resultCode": "ok",
+  "data": [
+    {
+      "baseAsset": "WB",
+      "baseAssetName": "WiseBlockchain",
+      "quoteAsset": "USDT",
+      "price": "0.2026184",
+      "change": "1.3",
+      "description": "Wise Blockchain develops a high-performance main chain based on the proof of history\nframework (laboratory TPS 4.6 million times per second).It is a distributed architecture based on a large number of device nodes, with ultra-high capacity and computing power, and integrates a\nnumber of mature cross-domain technologies, including device Internet of Things technology, big\ndata analysis, distributed cloud computing, AI artificial intelligence, etc. The overall framework of\nblockchain + big data + IOT + distributed computing + AI is a smart terminal device operation\nmanagement platform that guarantees fairness and security by means of blockchain encryption\nalgorithm.",
+      "status": "exchanged",
+      "depositNum": "229",
+      "needDepositNum": "2000"
+    },
+    {
+      "baseAsset": "AMIO",
+      "baseAssetName": "Amino",
+      "quoteAsset": "USDT",
+      "price": "0.5502757",
+      "change": "3.82",
+      "description": "Amino is a 5G ready intelligent Cloud-edge network. There are three layers in amino network: 1)       On chain consensus 2)       Off chain computation which provides computing power for various tasks like IoT , AI, AR/VR, Videos 3)       AI governance layer which operates token economy and provide security.   Amino is a blockchain project that truly empowers the real economy and planning to build the largest decentralized 5G ready Cloud-edge network in the world. Amino is building commercial grade edge computing network with 20~100k+ node by end of 2019. Amino founding team members are Professors and PHDs from University of Auckland, Stanford University, UNSW and Waterloo University.    The Amino's goal is to harness the power of community to build an edge computing network that transcends amazon AWS and delivers big returns to contributors.",
+      "status": "exchanged",
+      "depositNum": "40",
+      "needDepositNum": "2000"
+    },
+    {
+      "baseAsset": "VSC",
+      "baseAssetName": "Value Social Chain",
+      "quoteAsset": "USDT",
+      "price": "0.1703542",
+      "change": "13.56",
+      "description": "",
+      "status": "exchanged",
+      "depositNum": "244",
+      "needDepositNum": "2000"
+    },
+    {
+      "baseAsset": "OAX",
+      "baseAssetName": "OpenANX",
+      "quoteAsset": "USDT",
+      "price": "0.7487877",
+      "change": "13.45",
+      "description": "",
+      "status": "exchanged",
+      "depositNum": "32",
+      "needDepositNum": "2000"
+    },
+    {
+      "baseAsset": "MAYA",
+      "baseAssetName": "MAYA",
+      "quoteAsset": "USDT",
+      "price": "0.0180000",
+      "description": "",
+      "status": "depositing",
+      "depositNum": "119",
+      "needDepositNum": "2000"
+    }
+  ]
+}

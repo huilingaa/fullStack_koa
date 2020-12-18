@@ -1,0 +1,58 @@
+{
+  "resultCode": "ok",
+  "data": {
+    "rebateGradeConfigList": [
+      {
+        "id": "1",
+        "gradeName": "USER",
+        "gradeNameType": "lower",
+        "invitationPeopleNumber": "0",
+        "rebateAmount": "0",
+        "rebateScale": "0.155",
+        "remark": "",
+        "createdTime": "2019-11-05 18:29:06",
+        "updatedTime": "2019-11-08 11:12:47"
+      },
+      {
+        "id": "2",
+        "gradeName": "PRIMARY",
+        "gradeNameType": "primary",
+        "invitationPeopleNumber": "2",
+        "rebateAmount": "2.5",
+        "rebateScale": "0.175",
+        "createdTime": "2019-11-05 10:31:49",
+        "updatedTime": "2019-11-08 11:12:36"
+      },
+      {
+        "id": "3",
+        "gradeName": "SENIOR",
+        "gradeNameType": "hight",
+        "invitationPeopleNumber": "3",
+        "rebateAmount": "3.5",
+        "rebateScale": "0.2",
+        "createdTime": "2019-11-05 10:31:49",
+        "updatedTime": "2019-11-08 11:12:36"
+      },
+      {
+        "id": "4",
+        "gradeName": "PLATINUM",
+        "gradeNameType": "super",
+        "invitationPeopleNumber": "4",
+        "rebateAmount": "4.5",
+        "rebateScale": "0.3",
+        "createdTime": "2019-11-05 10:31:49",
+        "updatedTime": "2019-11-08 11:12:36"
+      }
+    ],
+    "coreUserRebateGrade": {
+      "id": "1811",
+      "userId": "100151",
+      "rebateGradeId": "2",
+      "invitationPeopleSum": "1",
+      "rebateAmountSum": "0.4500141",
+      "remark": "评定完成,本次定级为普通用户",
+      "createdTime": "2019-11-08 14:27:15",
+      "updatedTime": "2019-11-08 14:47:40"
+    }
+  }
+}

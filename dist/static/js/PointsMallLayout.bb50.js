@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{"aP+p":function(t,n,a){"use strict";a.r(n);var e={name:"PointsMallLayout"},l=a("KHd+"),s=Object(l.a)(e,(function(){var t=this.$createElement,n=this._self._c||t;return n("div",{staticClass:"pointsMallMain"},[n("router-view")],1)}),[],!1,null,null,null);n.default=s.exports}}]);

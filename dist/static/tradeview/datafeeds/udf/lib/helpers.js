@@ -1,0 +1,1 @@
+var isLoggingEnabled=!1;export function logMessage(e){if(isLoggingEnabled){var o=new Date;console.log(o.toLocaleTimeString()+"."+o.getMilliseconds()+"> "+e)}}export function getErrorMessage(e){return void 0===e?"":"string"==typeof e?e:e.message}

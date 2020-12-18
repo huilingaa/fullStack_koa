@@ -1,0 +1,36 @@
+{
+  "resultCode": "ok",
+  "data": {
+    "pageNo": "1",
+    "pageSize": "10",
+    "total": "10",
+    "list": [
+      {
+        "userName": "12345686@qq.com",
+        "rebated": "3.00000000000000000000",
+        "assetCode": "VSC"
+      },
+      {
+        "userName": "12345686@qq.com",
+        "rebated": "3.00000000000000000000",
+        "assetCode": "VSC"
+      },
+      {
+        "userName": "12345686@qq.com",
+        "rebated": "3.00000000000000000000",
+        "assetCode": "VSC"
+      },
+      {
+        "userName": "12345686@qq.com",
+        "rebated": "3.00000000000000000000",
+        "assetCode": "VSC"
+      },
+      {
+        "userName": "12345686@qq.com",
+        "rebated": "3.00000000000000000000",
+        "assetCode": "VSC"
+      }
+    ],
+    "totalPage": "2"
+  }
+}

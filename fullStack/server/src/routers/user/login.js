@@ -38,22 +38,25 @@ module.exports = async router => {
     if (isReceiveEmptys(username, password)) {
       ctx.throw('400', '用户名或密码不能为空')
     }
-    const data =  User.find()
+    // User.insertOne( { username: username}, { password: password}).function(err,result) {
+       
+    // }
+    // const data =  User.find()
     // const data = await User.findOne(
     //   { username: username}
     // )
-    if (!data) {
-      ctx.throw('400', data)
-    }
+    // if (!data) {
+    //   ctx.throw('400', data)
+    // }
 
-    ctx.body = {
-      user: data,
-      token: jsonwebtokenSign({
-        _id: data._id,
-        name: data.name,
-        ip: getCtxIp(ctx.ip)
-      })
-    }
-    await next()
+    // ctx.body = {
+    //   user: data,
+    //   token: jsonwebtokenSign({
+    //     _id: data._id,
+    //     name: data.name,
+    //     ip: getCtxIp(ctx.ip)
+    //   })
+    // }
+    // await next()
   })
 }

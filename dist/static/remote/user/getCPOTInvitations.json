@@ -1,0 +1,42 @@
+{
+  "resultCode": "ok",
+  "data": {
+    "cpotInviteList": [
+      {
+        "email": "123*****@qq.com",
+        "rebated": "2111.23"
+      },
+      {
+        "email": "139*******@qq.co",
+        "rebated": "1234.06"
+      },
+      {
+        "email": "674******@qq.com",
+        "rebated": "670.16"
+      },
+      {
+        "email": "674******@qq.com",
+        "rebated": "670.16"
+      },
+      {
+        "email": "674******@qq.com",
+        "rebated": "670.16"
+      },
+      {
+        "email": "674******@qq.com",
+        "rebated": "670.16"
+      },
+      {
+        "email": "674******@qq.com",
+        "rebated": "670.16"
+      },
+      {
+        "email": "674******@qq.com",
+        "rebated": "670.16"
+      }
+    ],
+    "oneself": {
+      "rebated": "0"
+    }
+  }
+}

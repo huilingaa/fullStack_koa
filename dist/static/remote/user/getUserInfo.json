@@ -1,0 +1,16 @@
+{
+  "resultCode": "ok",
+  "data": {
+    "email": "1396505025@qq.com",
+    "smsAuthActive": false,
+    "googleAuthActive": false,
+    "kycPassed": true,
+    "deductionAmm": false,
+    "withdrawLimitBTC": "100",
+    "lastLoginSuccessTime": "2019-11-08 12:29:16",
+    "lastLoginIp": "183.14.30.166",
+    "userPartnerGradeType": "lower",
+    "userPartnerGradeName": "普通用户",
+    "mobileNumber": "19*****53"
+  }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>交易大赛</title>
+    <script>
+      location.href = location.href.replace('jiaoyi.html', 'exchange.html')
+    </script>
+    <meta name="format-detection" content="telephone=no" /><!--关闭iPhone浏览器自动将数字识别为电话号码-->
+    <meta name="viewport" content="width=device-width,height=device-height,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>   <!--先bootstrap，后index.css-->
+    <link rel="stylesheet" href="css/reset.css"/>     <!--清除元素默认样式-->
+    <link rel="stylesheet" href="css/index.css"/>   <!--先bootstrap，后index.css-->
+    <script src="./js/common.js"></script>
+</head>
+<body>
+<section style="margin: auto;">
+  <div class="banner">
+    <p><b id="asset"></b></p>
+    <p><b><span id="type"></span></b></p>
+  </div>
+  <div class="navTitle">
+    <p>
+      <span  id="comp-buy" hidden onclick="refreshPage('comp-buy')"><a  class="onc">净买入大赛</a></span>
+      <span  id="comp-trade" hidden onclick="refreshPage('comp-trade')"><a class="onc">交易量大赛</a></span>
+      <span  id="comp-deposit" hidden onclick="refreshPage('comp-deposit')"><a class="onc">充值大赛</a></span>
+      <!--<span  id="comp-buy"><a href="index.html" class="onc">净买入大赛</a></span>-->
+      <!--<span  id="comp-trade"><a href="jiaoyi.html" class="onc">交易量大赛</a></span>-->
+      <!--<span  id="comp-deposit"><a href="chongzhi.html" class="onc">充值大赛</a></span>-->
+    </p>
+  </div>
+    <div class="contOne">
+        <ul>
+            <li class="first" id="comp_title"></li>
+            <li class="second" id="comp_time"></li>
+        </ul>
+    </div>
+
+    <!--未登录-->
+    <div class="contOne login" id="unauthor">
+        <ul>
+            <li class="first">
+                <span>账号：</span> <span>未登录</span>
+            </li>
+            <li class="second">
+                <img src="image/gx_mrl@@2x.png" class="img-responsive" style="display: inline-block" alt=""/>
+                <span>我的<i class="desc"></i>：</span><span>------</span>
+            </li>
+            <li class="third">
+                <img src="image/gx_paiming@@2x.png" class="img-responsive" style="display: inline-block" alt=""/>
+                <span>我的排名：</span><span>----</span></li>
+          <li class="four"><span class="abutton" id="login" onclick="login()">去登录</span></li>
+        </ul>
+    </div>
+
+    <!--已登录-->
+    <div class="contOne login account" id="author">
+        <ul>
+            <li class="first">
+                <span>账号：</span> <span id="user_email"></span>
+            </li>
+            <li class="second">
+                <img src="image/gx_mrl@@2x.png" class="img-responsive" style="display: inline-block" alt=""/>
+                <span>我的<i class="desc"></i>：</span><span id="user_volume"></span>
+            </li>
+            <li class="third">
+                <img src="image/gx_paiming@@2x.png" class="img-responsive" style="display: inline-block" alt=""/>
+                <span>我的排名：</span><span id="user_rank">未上榜</span></li>
+          <li class="four"><span class="abutton" id="toTrade" baseAsset="" quoteAsset="" tradeType="" onclick="toTrade()">去交易</span></li>
+        </ul>
+    </div>
+
+
+    <div class="list">
+        <div>
+            <p class="title"><span><i class="desc"></i>排名</span></p>
+            <hr/>
+            <table id="rankList">
+                <tr>
+                    <th>排名</th>
+                    <th>账号</th>
+                    <th><span class="desc"></span>(<span class="baseAsset"></span>)</th>
+                </tr>
+                <!--<tr>-->
+                    <!--<td>1</td>-->
+                    <!--<td>123456789@qq.com</td>-->
+                    <!--<td>100,000,000.00</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>1</td>-->
+                    <!--<td>123456789@qq.com</td>-->
+                    <!--<td>100,000,000.00</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>1</td>-->
+                    <!--<td>123456789@qq.com</td>-->
+                    <!--<td>100,000,000.00</td>-->
+                <!--</tr>-->
+            </table>
+        </div>
+
+    </div>
+    <div class="list active">
+        <div>
+            <p class="title"><span>活动规则</span></p>
+            <hr/>
+            <p class="cont"></p>
+        </div>
+    </div>
+</section>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/flexible.js"></script>
+<script src="js/index.js"></script>
+<script>
+  var client = Cookies.get('client')||'web'
+  initPage()
+</script>
+</body>
+<script>
+  function toTrade(){
+    var toTrade = $('#toTrade')
+    var params = {
+      'baseAsset':toTrade.attr('baseAsset'),
+      'quoteAsset':toTrade.attr('quoteAsset'),
+      'type': toTrade.attr('tradeType')
+    }
+    if(client.indexOf('android') >-1) {
+      //call native method
+      window.WebViewJavascriptBridge.callHandler(
+        'callbackFromWeb'
+        , params
+        , function(responseData) {
+        }
+      );
+      // webActivity.toTrade(toTrade.attr('baseAsset'), toTrade.attr('quoteAsset'), toTrade.attr('tradeType'));
+    }else if(client.indexOf('ios') > -1){
+      window.webkit.messageHandlers.callbackFromWeb.postMessage(JSON.stringify(params))
+    }
+  }
+
+  function login() {
+    var params = {'type':'login'}
+    if(client.indexOf('android')>-1){
+      window.WebViewJavascriptBridge.callHandler(
+        'callbackFromWeb'
+        , params
+        , function(responseData) {
+        })
+    }else if(client.indexOf('ios')>-1){
+      window.webkit.messageHandlers.callbackFromWeb.postMessage(JSON.stringify(params))
+    }
+  }
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151650608-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151650608-1');
+</script>
+<!-- cnzz -->
+<div style="display:none">
+  <script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1278179920&web_id=1278179920"></script>
+  <div>
+</html>
