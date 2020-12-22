@@ -1,1 +1,0 @@
-function getRank(e){return service.GET("/comp/rank/compId",{compId:e})}function getListRankings(e,n,s){return service.GET("/comp/api/list/rankings",{compId:e,page:n,size:s})}function getComps(e,n){return service.GET("/comp/api/listComp",{baseAsset:e,quoteAsset:n})}
